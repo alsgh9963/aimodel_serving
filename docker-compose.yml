@@ -1,3 +1,5 @@
+version: "3.8"
+
 services:
   inference_server:
     image: nvcr.io/nvidia/tritonserver:21.03-py3
