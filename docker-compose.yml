@@ -1,0 +1,9 @@
+services:
+  inference_server:
+    image: nvcr.io/nvidia/tritonserver:21.03-py3
+    volumes:
+      - /model:/model
+    ports:
+      - 8000:8000
+      - 8001:8001
+    command: ["trtserver", "--model-repository=/model", "--log-verbose=2"]
