@@ -5,9 +5,9 @@ services:
     image: nvcr.io/nvidia/tritonserver:21.04-py3
     restart: always
     volumes:
-      - /model:/model
+      - ./model:/model
     ports:
       - 80:8000
       - 8000:8000
-      - 81:8001
+      - 8001:8001
     command: ["tritonserver", "--model-repository=/model"]
