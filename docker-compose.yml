@@ -8,5 +8,6 @@ services:
       - /model:/model
     ports:
       - 80:8000
+      - 8000:8000
       - 81:8001
     command: ["tritonserver", "--model-repository=/model"]
