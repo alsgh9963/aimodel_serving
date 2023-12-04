@@ -2,9 +2,9 @@ name: AWS-BeanStalk-Pipeline
 
 env:
   APP_NAME : Deeplolaimodelproduct
-  ENV_NAME : Deeplolaimodelproduct-env
+  ENV_NAME : Deeplolaimodelproduct-env-1
   AWS_REGION_NAME : ap-northeast-2
-  DEPLOY_PKG_NAME : ai_model_serving_app.zip
+  DEPLOY_PKG_NAME : ${{ github.sha }}_ai_model_serving_app.zip
 
 on:
   push:
