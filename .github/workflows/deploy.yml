@@ -20,7 +20,7 @@ jobs:
         uses: actions/checkout@v2
 
       - name: Make zip pkg
-        run: zip -r ${{ env.DEPLOY_PKG_NAME }} ./ -x *.git*
+        run: zip -r ${{ env.DEPLOY_PKG_NAME }} . -x "*.git*"
 
       - name: Deploy to EB
         uses: einaregilsson/beanstalk-deploy@v21
