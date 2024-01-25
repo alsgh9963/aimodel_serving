@@ -6,6 +6,7 @@ env:
   AWS_REGION_NAME : ap-northeast-2
   DEPLOY_PKG_NAME : ${{ github.sha }}_ai_model_serving_app.zip
 
+
 on:
   push:
     branches:
